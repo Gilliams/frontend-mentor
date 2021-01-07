@@ -1,0 +1,94 @@
+.container{
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &_mobile{
+        position: absolute;
+        top: -9.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        &:after{
+            content: '';
+            background: url('../../images/bg-pattern-mobile.svg') center / contain no-repeat;
+            position: absolute;
+            top: 4rem;
+            left: 10%;
+            width: 90%;
+            height: 100%;
+        }
+    }
+    &_desktop{
+        display: none;
+    }
+    
+}
+
+.faq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.4rem 1.4rem 3rem 1.4rem;
+    &_item{
+        width: 100%;
+    }
+}
+
+details{
+    border-bottom: 1px solid $dark-grayish-blue;
+
+    p{
+        margin-bottom: 1rem;
+        padding-right: 5rem;
+    }
+}
+
+details[open] summary:after{
+    content: "";
+    background: url('../../images/icon-arrow-down.svg') no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+
+}
+
+details[open] summary{
+    color: $very-dark-desaturated-blue;
+    font-weight: 700;
+
+}
+
+summary{
+    cursor: pointer;
+    margin: 1rem 0;
+    position: relative;
+    list-style: none;
+    &:hover{
+        color: $soft-red;
+    }
+    &:after{
+        content: "";
+        background: url('../../images/icon-arrow-down.svg') no-repeat;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        transition: 0.5s ease;
+
+    }
+}
+
+summary::-webkit-details-marker {
+    display: none;
+ }

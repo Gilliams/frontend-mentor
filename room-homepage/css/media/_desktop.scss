@@ -1,0 +1,122 @@
+@media screen and (min-width: 900px){
+    .header{
+        position: relative;
+        display: flex;
+        &_btn{
+            position: absolute;
+            top: calc( 33.35rem - #{"clamp(3.5rem, 2.9718rem + 2.2535vw, 5rem)"}) ;
+            // left: 52.5rem;
+            left: 58%;
+        }
+    }
+    
+    .hero{
+        flex: 1 1 58%;
+        height: 534px;
+        display: flex;
+        justify-content: start;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .mobile_hero--1{
+            display: none;
+        }
+        .desktop_hero--1{
+            display: block;
+        }
+    }
+
+    .hero_header{
+        padding-top: 3rem;
+        display: flex;
+        justify-content: start;
+        width: 58%;
+        .logo{
+            display: block;
+            margin-left: 4rem;
+            margin-top: .2rem;
+            margin-right: 3.5rem;
+        }
+        &_nav{
+            display: block;
+            order: 2;
+            ul{
+                display: flex;
+                color: $white;
+                li{
+                    margin: 0 $margin-size;
+                    cursor: pointer;
+                    &:hover{
+                        border-bottom: 2px solid $white;
+                    }
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                }
+            }
+            &--mobile{
+                display: none;
+            }
+        }
+    
+    }
+    
+    
+    
+    .main{
+        flex: 1 1 42%;
+        height: 534px;
+        padding: 5% 4%;
+        &_link {
+            margin-top: 3.75rem;
+            text-transform: uppercase;
+            a{
+                color: $black;
+                letter-spacing: 0.75rem;
+                font-weight: 600;
+            }
+            img{
+                margin-left: 2.75rem;
+            }
+            &:hover{
+                a, svg path{
+                    color: $dark-gray;
+                    fill: $dark-gray;
+                }
+            }
+        }
+    }
+    
+    .footer{
+        display: flex;
+        width: 100%;
+    }
+
+    .product-1, .product-2{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    
+    }
+    .product-1{
+        flex: 0 1 29%;
+    }
+    .product-2{
+        flex: 0 1 33%;
+    }
+    
+    .about{
+        flex: 1 1 40%;
+        padding: 4.5rem 3.125rem ;
+    }
+
+    .attribution{
+        position: absolute;
+        left: 50%;
+        width: 30%;
+        bottom: 20px;
+        transform: translateX(-50%);
+    }
+}

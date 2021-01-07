@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 5;
+    background: white;
+    .nav{
+        display: none;
+    }
+    &_btn{
+        background:none;
+        border: none;
+        cursor: pointer;
+        .hamburger{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+#app{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+.mobile_nav{
+    height: 100vh;
+    width: 100%;
+    z-index: 5;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    .nav{
+        
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        background: url('../../assets/images/bg-pattern-mobile-nav.svg') bottom right / contain no-repeat, var(--very-dark-violet);
+        a{
+            color: var(--very-light-gray);
+            text-decoration: none;
+            margin: 1.5rem 0;
+        }
+        .btn{
+            width: 100%;
+        }
+    }
+    .close{
+        display: block;
+    }
+}

@@ -1,0 +1,75 @@
+@media (min-width: 900px){
+
+    .top{
+        height: 35vh;
+    }
+    .map, #map{
+        height: 65vh;
+    }
+    .content{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    // .content{
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     padding: 2rem 1.5rem 0;
+    //     display: flex;
+    //     justify-content: center;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     z-index: 10;
+    //     max-width: 1112px;
+    // }
+    .tracker{
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+    .infos{
+        flex-direction: row ;
+        padding: 1.5rem;
+        height: 10rem;
+        align-items: start;
+        .ip, .location, .timezone{
+            margin-bottom: 0;
+        }
+        div{
+            flex: 1 1;
+            height: 100%;
+            text-align: left;
+            position: relative;
+            padding: 0 1.5rem;
+            &:after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 50%;
+                left: 0;
+                width: 1px;
+                background: #000;
+            }
+            &:nth-child(1){
+                padding-left: 0;
+                &:after{
+                    display: none;
+                }
+            }
+            &:nth-child(4){
+                padding-right: 0;
+            }
+        }
+    }
+
+    .attribution{
+        top: 20px;
+        left: 20px;
+        a {
+            color: rgba(255, 255, 255, 0.5);
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}

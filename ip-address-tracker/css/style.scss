@@ -1,0 +1,7 @@
+$very-dark-gray: hsl(0, 0%, 17%);
+$dark-gray: hsl(0, 0%, 59%);
+
+@import './base';
+@import './components/main';
+@import './media/mobile';
+@import './media/desktop';

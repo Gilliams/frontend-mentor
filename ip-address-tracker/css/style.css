@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+}
+
+.attribution {
+  font-size: clamp(0.813rem, 0.7295rem + 0.3561vw, 1.05rem);
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+}
+
+.top {
+  height: 42vh;
+  background: url("../images/pattern-bg.png") no-repeat;
+  background-size: cover;
+}
+
+.map, #map {
+  height: 58vh;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2rem 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  max-width: 1112px;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+}
+
+.tracker_input, h3 {
+  font-size: 1.125rem;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
+.tracker {
+  margin: 2rem 0 1.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tracker_container {
+  background: white;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: .5rem;
+}
+
+.tracker_input {
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.tracker_btn {
+  cursor: pointer;
+  padding: 1.5rem;
+  background: #000;
+  border: none;
+  font-size: 1.125rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+
+.tracker_btn .icon-arrow {
+  color: white;
+}
+
+.tracker_btn:hover {
+  background: #2b2b2b;
+}
+
+.infos {
+  background: white;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 0 1.5rem;
+  width: 100%;
+}
+
+.infos p {
+  color: #969696;
+  font-weight: 400;
+}
+
+.infos div {
+  text-align: center;
+}
+
+.infos div p {
+  margin-bottom: 0.5rem;
+}
+
+.infos .ip, .infos .location, .infos .timezone {
+  margin-bottom: 1.5rem;
+}
+
+.marker {
+  background-image: url("../../images/icon-location.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.attribution {
+  bottom: 20px;
+  left: 20px;
+}
+
+.attribution a {
+  color: rgba(3, 3, 3, 0.5);
+}
+
+.attribution a:hover {
+  color: #030303;
+}
+
+@media (min-width: 900px) {
+  .top {
+    height: 35vh;
+  }
+  .map, #map {
+    height: 65vh;
+  }
+  .content {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .tracker {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+  .infos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1.5rem;
+    height: 10rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .infos .ip, .infos .location, .infos .timezone {
+    margin-bottom: 0;
+  }
+  .infos div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+    height: 100%;
+    text-align: left;
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .infos div:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 50%;
+    left: 0;
+    width: 1px;
+    background: #000;
+  }
+  .infos div:nth-child(1) {
+    padding-left: 0;
+  }
+  .infos div:nth-child(1):after {
+    display: none;
+  }
+  .infos div:nth-child(4) {
+    padding-right: 0;
+  }
+  .attribution {
+    top: 20px;
+    left: 20px;
+  }
+  .attribution a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .attribution a:hover {
+    color: white;
+  }
+}
+/*# sourceMappingURL=style.css.map */

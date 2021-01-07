@@ -1,0 +1,74 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5.875rem 1.563rem;
+    gap: 1.5rem;
+}
+
+.card{
+    width: 100%;
+    border-radius: 0.625rem;
+    padding: 2.063rem;
+    .description, .name{
+        color: $white;
+    }
+    .text{
+        @include review($white);
+        margin-top: 1rem;
+        line-height: 1.4;
+    }
+    &--violet{
+        background-color: $moderate-violet;
+        background-image: url('../../images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: top right 1.5rem;
+    }
+    &--grayish-blue{
+        background: $very-dark-grayish-blue;
+    }
+    &--blackish{
+        background: $very-dark-blackish-blue;
+    }
+    &--white{
+        background: $white;
+        .description, .name{
+            color: $very-dark-grayish-blue;
+        }
+        .text{
+            @include review($very-dark-grayish-blue);
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+    }
+    &_header{
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .info{
+        .verified{
+            @include verified($white);
+        }
+    }
+    .info-black{
+        .verified{
+            @include verified($very-dark-grayish-blue) ;
+        }
+    }
+}
+
+.profile {
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: 50%;
+    &--violet1{
+        border: 2.5px solid rgba($white, 0.3);
+    }
+    &--violet2{
+        border: 2.5px solid $moderate-violet;
+    }
+}
+
+.attribution{
+    margin-bottom: 40px;
+}

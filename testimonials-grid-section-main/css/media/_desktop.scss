@@ -1,0 +1,41 @@
+@media screen and (min-width: 900px){
+    .container{
+        padding: 5.875rem 10.313rem;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-areas: 
+        "c-violet c-violet c-blue"
+        "c-white c-black c-black"
+        "c-white2 c-white2 c-white2";
+    }
+
+    .card{
+        &--violet{
+            grid-area: c-violet;
+            background-position: top right 6.5rem !important;
+            background-size: 7.5rem;
+        }
+        &--grayish-blue{
+            grid-area: c-blue;
+        }
+        &--blackish{
+            grid-area: c-black;
+        }
+        &--white{
+            grid-area: c-white;
+        }
+        &--white--2{
+            grid-area: c-white2;
+        }
+    }
+    
+}
+@media screen and (min-width: 1100px){
+    .container{
+        padding: 5.875rem 10.313rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        grid-template-areas: 
+        "c-violet c-violet c-blue c-white2"
+        "c-white c-black c-black c-white2";
+    }
+    
+}

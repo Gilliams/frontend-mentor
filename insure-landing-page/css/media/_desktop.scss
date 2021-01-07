@@ -1,0 +1,191 @@
+@media (min-width:900px){
+    .header{
+        padding: 1.5rem 10rem;
+        .nav{
+            display: block;
+            a{
+                margin-right: 1.5rem;
+                font-weight: 700;
+                color: var(--dark-grayish-violet);
+                &:hover{
+                    color: var(--very-dark-violet);
+                }
+            }
+        }
+        &_btn{
+            display: none;
+        }
+    }
+    #app{
+        position: relative;
+    }
+    .mobile_nav{
+        display: none;
+    }
+
+    .hero{
+        flex-wrap: initial;
+        position: relative;
+        align-items: center;
+        padding: 3rem 0rem 0;
+        max-height: 600px;
+        height: 100%;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 90%;
+            background:url('../../assets/images/bg-pattern-intro-right-desktop.svg') no-repeat;
+            background-size: contain;
+            background-position: top right;
+            top: 0;
+            right: 0;
+            z-index: 5;
+        }
+        &_container{
+            display: flex;
+            align-items: center;
+            margin: 0 10rem;
+            flex-wrap: initial;
+        }
+
+        &_content{
+            background-image: none;
+            align-items: flex-start;
+            text-align: left;     
+            margin-right: 1rem;
+            margin-top: 1rem;
+            padding: 0;
+            height: 100%;
+            &_title{
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 0;
+                    width: 30%;
+                    height: 1px;
+                    background: var(--very-light-gray);
+                }
+            } 
+            
+        }
+        &_img_container{
+            position: relative;
+            width: 80%;
+            margin-left: 2rem;
+            margin-right: auto;
+
+        }
+        
+        &_img--mobile{
+            opacity: 0;
+        }
+        &_img--desktop{
+            display: block;
+        }
+
+    }
+
+    .hero_img--desktop{
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .main{
+        margin: 10rem 0 5rem;
+        padding: 0 10rem;
+        flex-wrap: unset;
+        flex-direction: column;
+        &_background--mobile{
+            display: none;
+        }
+        &_background--desktop{
+            display: block;
+            position: absolute;
+            top: -50%;
+            left: 0;
+            img{
+                width: 80%;
+                height: auto;
+            }
+        }
+        &_arguments{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &_title{
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                top: -2.5rem;
+                left: 0;
+                width: 7%;
+                height: 1px;
+                background: var(--dark-grayish-violet);
+                transform: unset;
+            }
+        }
+
+        .argument{
+            align-items: start;
+            &_text{
+                text-align: left;
+            }
+            &:nth-child(2){
+                margin: 0 1rem;
+            }
+        }
+
+        .more{
+            margin-top: 5rem;
+            justify-content: space-between;
+            text-align: left;
+            padding: 3rem 3rem;
+            background-image: url('../../assets/images/bg-pattern-how-we-work-desktop.svg');
+        }
+
+    }
+
+    .footer{
+        display: flex;
+        align-items: unset;
+        padding: 0 10rem 2rem;
+        background-image: url('../../assets/images/bg-pattern-footer-desktop.svg');
+        background-size: contain;
+        .contact{
+            justify-content: space-between;
+            flex-direction: row;
+            position: relative;
+            align-items: center;
+            padding: 4rem 0 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--dark-grayish-violet);
+            &_logo{
+                margin-bottom: 0;
+            }
+            &:after{
+                display: none;
+            }
+        }
+
+        &_lists{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: start;
+        }
+        .list{
+            align-items: start;
+        }
+    }
+
+}

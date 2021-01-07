@@ -1,0 +1,69 @@
+@media (min-width:900px){
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        width: 920px;
+        position: relative;
+    }
+
+    .box{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -8rem;
+        z-index: 5;
+        display: block;
+        z-index: 1000;
+    }
+
+    .background{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &_mobile{
+            display: none;
+        }
+        &_desktop{
+            display: block;
+            position: absolute;
+            top: 5rem;
+            left: 1rem;
+            transform: translateX(-20%);
+            &:after{
+                content: '';
+                background: url('../../images/bg-pattern-desktop.svg') no-repeat;
+                position: absolute;
+                background-size: contain;
+                top: -5rem;
+                left: -6.5rem;
+                width: 100%;
+                height: 100%;
+                scale: 2.5;
+            }
+        }
+        
+    }
+    
+    .faq{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1.4rem 1.4rem 3rem 1.4rem;
+        width: 100%;
+        margin-top: 0;
+        margin: 3rem;
+        &_item{
+            width: 100%;
+        }
+        h1{
+            align-self: flex-start;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="content">
+      <h1>IP Address Tracker</h1>
+
+      <form action="" class="tracker">
+        <div class="tracker_container">
+          <input type="text" class="tracker_input"  placeholder="Search for any IP address or domain">
+        </div>
+          <button type="submit" class="tracker_btn">
+            <svg class="icon-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+          </button>
+      </form>
+      
+      <div class="infos">
+        <div class="ip">
+          <p>IP Address</p>
+          <h3>192.212.174.101</h3>
+        </div>
+        <div class="location">
+          <p>Location</p>
+          <h3>Brooklyn, NY 10001</h3>
+        </div>
+        <div class="timezone">
+          <p>Timezone</p>
+          <h3>UTC-05:00</h3>
+        </div>
+        <div class="isp">
+          <p>ISP</p>
+          <h3>SpaceX Starlink </h3>
+        </div>
+      </div>
+    </div>
+    <div class="map" id="map">
+      
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Florian Andrieux</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

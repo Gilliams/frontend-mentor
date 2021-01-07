@@ -1,0 +1,52 @@
+// Primary
+$moderate-violet: hsl(263, 55%, 52%);
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$very-dark-blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+
+@mixin verified($color) {
+    color: $color;
+    opacity: 50%;
+
+}
+
+@mixin review($color) {
+    color: $color;
+    opacity: 70%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    height: 100vh;
+}
+
+body {
+    background: $light-grayish-blue;
+}
+
+p {
+    font-size: #{"clamp(0.813rem, 0.7295rem + 0.3561vw, 1.05rem)"};
+}
+
+h2 {
+    font-size: #{"clamp(1.25rem, 1.1268rem + 0.5258vw, 1.6rem)"};
+}
+
+.attribution {
+    font-size: #{"clamp(0.813rem, 0.7295rem + 0.3561vw, 1.05rem)"};
+    text-align: center;
+    align-items: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}

@@ -1,0 +1,116 @@
+.container{
+    position: relative;
+}
+.top{
+    height: 42vh;
+    background: url('../images/pattern-bg.png') no-repeat;
+    background-size: cover;
+}
+.map, #map{
+    height: 58vh;
+    width: 100%;
+}
+.content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2rem 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    max-width: 1112px;
+}
+
+h1{
+    color: white;
+    font-weight: 700;
+}
+.tracker_input, h3{
+    font-size: 1.125rem;
+    color: $very-dark-gray;
+    font-weight: 500;
+}
+
+.tracker{
+    margin: 2rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    &_container{
+        background: white;
+        border-top-left-radius: 1.2rem;
+        border-bottom-left-radius: 1.2rem;
+        flex: 1 ;
+        padding: .5rem;
+    }
+    &_input{
+        padding: 1rem;
+        cursor: pointer;    
+        border: none;
+        width: 100%;
+    }
+    &_btn{
+        cursor: pointer;
+        padding: 1.5rem;
+        background: #000;
+        border: none;
+        font-size: 1.125rem;
+        border-top-right-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+        .icon-arrow{
+            color: white;
+        }
+        &:hover{
+            background: $very-dark-gray;
+        }
+    }
+
+}
+
+.infos {
+    background: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0 1.5rem;
+    width: 100%;
+    p{
+        color: $dark-gray;
+        font-weight: 400;
+    }
+    div{
+        text-align: center;
+        p{
+            margin-bottom: 0.5rem;
+        }
+    }
+    .ip,.location, .timezone{
+        margin-bottom: 1.5rem;
+    }
+}
+
+.marker{
+    background-image: url('../../images/icon-location.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.attribution{
+    bottom: 20px;
+    left: 20px;
+    a {
+        color: rgba(3, 3, 3, 0.5);
+        &:hover{
+            color: rgba(3, 3, 3, 1);
+        }
+    }
+}

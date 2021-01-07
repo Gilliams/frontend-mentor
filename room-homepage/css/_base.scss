@@ -1,0 +1,45 @@
+$dark-gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$very-dark-gray: hsl(0, 0%, 27%);
+
+$btn-size:  #{"clamp(3.5rem, 2.9718rem + 2.2535vw, 5rem)"};
+$title-size: #{"clamp(1.563rem, 1.4091rem + 0.6565vw, 2rem)"};
+$text-size: #{"clamp(0.625rem, 0.4930rem + 0.5634vw, 1rem)"};
+$margin-size: #{"clamp(0.2rem, -0.4338rem + 2.7042vw, 2rem)"};
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+
+body{
+    font-family: 'Spartan', sans-serif;
+    height: 100vh;
+}
+
+
+
+.btn{
+    height: $btn-size;
+    width: $btn-size;
+    background: $black;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: $very-dark-gray;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+

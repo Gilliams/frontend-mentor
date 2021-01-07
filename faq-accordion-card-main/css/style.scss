@@ -1,0 +1,60 @@
+// Text
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+// Gradient
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+// Dividers
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(180deg, $soft-violet, $soft-blue);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem 0;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2rem;
+    color: $light-grayish-blue;
+    a { 
+        color: $soft-red;
+    }
+}
+
+p,summary{
+    font-size: #{"clamp(0.8rem, 0.6620rem + 0.3756vw, 1rem)"};
+    color: $dark-grayish-blue;
+}
+
+hr{
+    color: $light-grayish-blue;
+}
+
+
+h1{
+    font-size: #{"clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem)"};
+}
+
+p{
+    line-height: 1.5;
+}
+
+@import './components/main';
+
+@import './media/desktop';

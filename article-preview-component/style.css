@@ -1,0 +1,227 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: #ecf2f8;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.card .img {
+  max-width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card .img img {
+  max-width: 100%;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  max-width: 30rem;
+}
+
+.card .section h2 {
+  margin-bottom: 1rem;
+  color: #48556a;
+}
+
+.card .section p {
+  font-size: .8rem;
+  color: #6d7f97;
+  font-weight: 500;
+}
+
+.card_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.card_footer .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card_footer .person img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card_footer .person div {
+  margin-left: 1rem;
+}
+
+.card_footer .person div span {
+  font-weight: 700;
+  color: #48556a;
+}
+
+.card .share {
+  position: relative;
+}
+
+.card .share button {
+  background: #ecf2f8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.component {
+  background: #48556a;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -200%;
+  left: -230%;
+  opacity: 0;
+}
+
+.component img {
+  margin-left: 1rem;
+}
+
+.component .path {
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+          clip-path: polygon(50% 100%, 0 0, 100% 0);
+  background: #48556a;
+  width: 25px;
+  height: 14px;
+}
+
+.component span {
+  color: #9eafc2;
+}
+
+@media screen and (max-width: 850px) {
+  .card {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 40px 20px;
+    position: relative;
+  }
+  .card .img {
+    max-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card .img img {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+  }
+  .card .section {
+    max-width: none;
+  }
+  .card .section h2 {
+    font-size: 1.05rem;
+  }
+  .card .section p {
+    line-height: 1.5;
+  }
+  .card .share {
+    position: static;
+    margin-top: 60px;
+  }
+  .card .share .share-cta {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+  }
+  .component {
+    position: absolute;
+    width: 100%;
+    background: #48556a;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 2rem 0 2rem 2.2rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .component .path {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
