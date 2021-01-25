@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Red Hat Text', sans-serif;
+  height: 100vh;
+}
+
+body{
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  background: bottom / contain no-repeat url('../images/pattern-hills.svg'),$background;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title{
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: .5rem;
+  font-size: #{"clamp(0.875rem, 0.8447rem + 0.1294vw, 1rem)"};;
+  margin: 8.75rem 0 9.375rem 0;
+}
+
+.card {
+  display: block;
+  position: relative; 
+  padding-bottom: $halfHeight;
+  font-size: #{"clamp(2.5rem, 1.4078rem + 4.6602vw, 7rem)"};
+  line-height: 0.95;
+  position: relative;
+}
+
+.card__top{
+  overflow: hidden;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+  display: block;
+  height: $halfHeight;
+  color: $soft-red;
+  background: darken($dark-desaturated-blue, 5%);
+  padding: 0.25em 0.25em;
+  border-radius: $borderRadius $borderRadius 0 0;
+  backface-visiblity: hidden;
+  transform-style: preserve-3d;
+  width: 1.8em;
+  transform: translateZ(0);
+  
+}
+
+.card__bottom { 
+  color: $soft-red;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: $dark-desaturated-blue; 
+  border-radius: 0 0 $borderRadius $borderRadius; 
+  pointer-events: none;
+  overflow: hidden;
+  box-shadow: 0 .8rem  $very-dark-blue-2;
+
+}
+
+.card__bottom::after {
+  display: block;
+  margin-top: -$halfHeight;
+}
+
+.card__back::before,
+.card__bottom::after {
+  content: attr(data-value);
+}
+
+.card__back {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  pointer-events: none;
+  &::before {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+}
+
+.footer{
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.social-item{
+    cursor: pointer;
+    &:hover > svg > path{
+        fill: $soft-red;
+    }
+}
+
+.social-item:not(:nth-child(1))> svg{
+    margin-left: 1rem;
+}
+
+
+.attribution {
+    margin-top: 2rem;
+    font-size: 11px;
+    text-align: center; 
+    color: $white;
+    a { 
+        color: $soft-red; 
+    }
+}
+
+@media screen and (max-width: 950px){
+  .flip-clock{
+    margin:  .5rem;
+    &__piece{
+      margin: 0 .5rem;
+    }
+    &__piece:nth-child(1){
+      margin: 0 .5rem 0 0;
+    }
+    &__piece:nth-child(4){
+      margin: 0 0 0 .5rem;
+    }
+  }
+  .title{
+    text-align: center;
+    width: 80%;
+    margin: 8.75rem auto 9.375rem auto;
+  }
+}

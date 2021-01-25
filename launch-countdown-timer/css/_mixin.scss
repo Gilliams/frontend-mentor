@@ -1,0 +1,12 @@
+@mixin halfRound($x, $direction){
+    @if($direction == "right"){
+      width: $x;
+      height: $x * 2;
+      border-radius: 0 $x $x 0;
+    }
+    @if($direction == "left"){
+      width: $x;
+      height: $x * 2;
+      border-radius:  $x 0 0 $x;
+    }
+}

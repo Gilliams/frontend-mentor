@@ -1,0 +1,24 @@
+//*****SIZES****** 
+
+$halfHeight: 0.72em;
+$borderRadius: 0.15em;
+
+$font-size: 0.875rem; // 14px
+
+//*****COLORS****** 
+
+$grayish-blue: hsl(237, 18%, 59%);
+$soft-red: hsl(345, 95%, 68%);
+
+$white: hsl(0, 0%, 100%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$very-dark-blue: hsl(235, 16%, 14%);
+$very-dark-blue-2: hsl(234, 17%, 12%);
+
+$bottomGradient: #241c2b;
+
+$background: top/94% no-repeat url('../images/bg-stars.svg'), linear-gradient(to bottom, $very-dark-blue-2, $bottomGradient);
+
+
+$halfHeight: 0.72em;
+$borderRadius: 0.15em;

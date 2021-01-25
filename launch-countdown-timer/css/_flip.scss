@@ -1,0 +1,88 @@
+.flip-clock {
+  text-align: center;
+  perspective: 400px;
+  
+  *,
+  *:before,
+  *:after { box-sizing: border-box; }
+}
+
+.flip-clock__card{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    @include halfRound(.1em, "right");
+    background-color: $very-dark-blue-2;
+    z-index: 1500;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    @include halfRound(.1em, "left");
+    background-color: $very-dark-blue-2;
+    z-index: 1500;
+  }
+}
+
+.flip-clock__piece {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.flip-clock__slot {
+  text-transform: uppercase;
+  color: $grayish-blue;
+  letter-spacing: #{"clamp(0.1rem, 0.0029rem + 0.4142vw, 0.5rem)"};
+  font-size: #{"clamp(0.5rem, 0.4029rem + 0.4142vw, 0.9rem)"};
+  margin: 2rem 0;
+}
+
+.flip .card__back::before {
+  animation: flipTop 0.3s cubic-bezier(.37,.01,.94,.35);
+  animation-fill-mode: both;
+  transform-origin: center bottom;
+  
+}
+
+.flip .card__back .card__bottom {
+  transform-origin: center top;
+  animation-fill-mode: both;
+  animation: flipBottom 0.6s cubic-bezier(.15,.45,.28,1);// 0.3s; 
+}
+
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+    z-index: 2;
+  }
+  0%, 99% {
+    opacity: 0.99;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipBottom {
+  0%, 50% {
+    z-index: -1;
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  51% {
+    opacity: 0.99;
+  }
+  100% {
+    opacity: 0.99;
+    transform: rotateX(0deg);
+    z-index: 5;
+  }
+}
