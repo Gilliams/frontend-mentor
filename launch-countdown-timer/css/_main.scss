@@ -39,6 +39,7 @@ body{
   font-size: #{"clamp(2.5rem, 1.4078rem + 4.6602vw, 7rem)"};
   line-height: 0.95;
   position: relative;
+  vertical-align: center;
 }
 
 .card__top{
@@ -109,6 +110,7 @@ body{
     align-items: center;
     flex-direction: column;
     z-index: 5;
+    width: 100%;
 }
 
 .social-item{
@@ -134,21 +136,18 @@ body{
 }
 
 @media screen and (max-width: 950px){
-  .flip-clock{
-    margin:  .5rem;
-    &__piece{
-      margin: 0 .5rem;
-    }
-    &__piece:nth-child(1){
-      margin: 0 .5rem 0 0;
-    }
-    &__piece:nth-child(4){
-      margin: 0 0 0 .5rem;
-    }
-  }
   .title{
     text-align: center;
     width: 80%;
     margin: 8.75rem auto 9.375rem auto;
+  }
+}
+
+@media screen and (max-width: 300px){
+  .container{
+    margin-bottom: 2rem;
+  }
+  .footer{
+    bottom: unset;
   }
 }
